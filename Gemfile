@@ -6,9 +6,11 @@ gem 'rails', '4.0.4'
 
 gem 'rails-api'
 
-# Use mysql2 as the database for Active Record
-gem 'mysql2'
+# Use postgresql as the database for Active Record
+gem 'pg'
 
+
+gem 'rails_12factor', group: :production
 
 
 
@@ -26,3 +28,5 @@ gem 'mysql2'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+ruby "2.1.1"
