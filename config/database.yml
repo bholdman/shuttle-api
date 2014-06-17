@@ -9,8 +9,7 @@ development:
   database: shuttle
   username: shuttle
   password: 5Ywr7Wt6UdVn6W6G
-  host: 150.201.33.119
-  port: 3306
+  host: wdsprod.semo.edu
   pool: 10
   timeout: 5000
 
@@ -23,8 +22,7 @@ test:
   database: shuttle
   username: shuttle
   password: 5Ywr7Wt6UdVn6W6G
-  host: 150.201.33.119
-  port: 3306
+  host: wdsprod.semo.edu
   pool: 10
   timeout: 5000
 
@@ -34,7 +32,6 @@ production:
   database: shuttle
   username: shuttle
   password: 5Ywr7Wt6UdVn6W6G
-  host: 150.201.33.119
-  port: 3306
+  host: wdsprod.semo.edu
   pool: 10
   timeout: 5000

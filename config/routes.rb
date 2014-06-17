@@ -1,4 +1,14 @@
 ShuttleApi::Application.routes.draw do
+
+
+    resources :shuttles
+    resources :drivers
+    resources :stops
+    resources :routes, :defaults => { :format => 'json' }
+    resources :route_stops
+    resources :gps_data
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
