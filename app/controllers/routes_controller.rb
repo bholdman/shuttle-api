@@ -38,7 +38,10 @@ class RoutesController < ApplicationController
 	def update
 		route = Route.find(params[:id])
 		if route.update(route_params)
-			head 204
+			head 204, location: route
+		else
+			#Client error, retuen error as json
+			render json: route.errors, status: 422
 		end
 	end
 end
