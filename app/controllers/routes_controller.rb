@@ -25,7 +25,7 @@ class RoutesController < ApplicationController
 	end
 
 	def create
-		route = Routes.new(route_params)
+		route = Route.new(route_params)
 		if route.save
 			render json: route, status: 201, location: route
 		end
