@@ -1,6 +1,5 @@
 class RoutesController < ApplicationController
 	include ActionController::MimeResponds
-	protect_from_forgery with: :null_session
 	
 	def route_params
 		params.require(:route).permit(:name, :active)	
