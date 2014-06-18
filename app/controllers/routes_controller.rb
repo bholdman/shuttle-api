@@ -27,7 +27,18 @@ class RoutesController < ApplicationController
 	def create
 		route = Route.new(route_params)
 		if route.save
-			render json: route, status: 201, location: route
+			#new route created succesfully
+			head 204, location: route
+		else
+			#Client error, retuen error as json
+			render json: route.errors, status: 422
+		end
+	end
+
+	def update
+		route = Route.find(params[:id])
+		if route.update(route_params)
+			head 204
 		end
 	end
 end
