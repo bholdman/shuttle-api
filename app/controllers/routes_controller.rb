@@ -44,4 +44,8 @@ class RoutesController < ApplicationController
 			render json: route.errors, status: 422
 		end
 	end
+
+	def destroy
+		#routes shouldn't be deleted they should just be archived
+	end
 end
