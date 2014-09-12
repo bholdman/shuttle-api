@@ -1,0 +1,8 @@
+All timestamps are GMT
+
+get all routes in xml  /routes.xml
+get all routes in json  /routes.json
+Get one route (case sensitive) /routes/Red
+
+filters:
+/routes?active=true

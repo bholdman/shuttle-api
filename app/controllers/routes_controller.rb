@@ -47,5 +47,8 @@ class RoutesController < ApplicationController
 
 	def destroy
 		#routes shouldn't be deleted they should just be archived
+		route = Route.find(params[:id])
+		route.archive
+		head 204
 	end
 end

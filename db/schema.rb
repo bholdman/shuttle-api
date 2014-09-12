@@ -11,11 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617021058) do
+ActiveRecord::Schema.define(version: 20140619194710) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "drivers", force: true do |t|
+    t.boolean  "active",      default: false, null: false
+    t.boolean  "archived",    default: false, null: false
+    t.datetime "archived_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "routes", force: true do |t|
     t.string   "name"
-    t.boolean  "active"
+    t.boolean  "active",      default: false, null: false
+    t.boolean  "archived",    default: false, null: false
+    t.datetime "archived_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
